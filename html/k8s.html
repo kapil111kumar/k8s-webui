@@ -1,0 +1,86 @@
+ 
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="k8s.css">
+  <script src="https://kit.fontawesome.com/b23a20a39d.js" crossorigin="anonymous"></script>
+  <title>Search Box</title>
+  
+
+</head>
+
+<img id="im1" src="k8s.png" alt="Avatar" class="imagek" height="100px" width="100px" >
+<div class="container">
+
+<div id="m1"><h2>Menu</h2></div>
+
+<p id="p1" class="big">
+  - Launch a pod - </br>
+  - Create a deployment -</br>
+  - Scale your replicas -</br>
+  - Expose your services -</br>
+  - Describe pods -</br>
+  - Desribe deployments -</br>
+  - Desribe services -</br>
+  - Delete any pods -</br>
+  - Delete any deployments -</br>
+  - Delete any services -</br>
+  - Delete any resource -</br>
+  - Delete complete environment created -</br>
+</p>
+
+
+</div>
+</div>
+
+
+
+<!-- --------------input part----------------------- -->
+
+<div class="login-box">
+  <h2>Kubernetes Web Portal</h2>
+  <form>
+    <div class="user-box">
+      <input id="in1" type="text" name="" required="">
+      <label>Type your instruction here</label>
+    </div>
+  
+    <a onclick="fn()" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Run
+    </a>
+    <div id="ip1" onclick="fn2()"> Help </div> 
+  </form>
+</div>
+
+<pre>   
+  <div id="d1"> >_ your output will be printed here</div>
+  </pre>
+  
+
+  <script>
+  function fn(){
+  
+  var i = document.getElementById('in1').value;
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST","http://192.168.56.117/cgi-bin/k8s.py?x="+i,true);
+  
+  xhr.send();
+  
+  xhr.onload = function(){
+      var output=xhr.responseText;
+      document.getElementById("d1").innerHTML=output;
+  }
+  }
+  
+  function fn2(){
+ 
+    window.open(
+      "http://192.168.56.117/k8shelp.html", "_blank"
+    )
+  }
+
+  
+  </script>
