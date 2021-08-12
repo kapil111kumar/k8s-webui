@@ -1,7 +1,3 @@
-# k8s-webui
-Contains for the webui for running docker cluster from browser with simple English instructions.
-For video demonstration visit this [link](https://www.linkedin.com/posts/bhardwaj-rahul_summerinternship2021-arth-docker-activity-6816061470271389696-fE69)
-
 ## Prerequisites
 * This repository uses a pre-setup kubernetes cluster which can be accessed through the system on which the apache webserver is running.
 * In the provided video I have used minikube to show the demonstration.
